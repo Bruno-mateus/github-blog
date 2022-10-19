@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         color:${({ theme }) => theme.textColor};
         -webkit-font-smoothing:antialiased;
         font-size:1rem ;
+      
     }
     body,textarea,input,button{
         font-family: 'Nunito', sans-serif;

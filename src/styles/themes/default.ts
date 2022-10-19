@@ -7,4 +7,6 @@ export const defaultTheme = {
   title: '#E7EDF4',
   textInfo: '#7B96B2',
   linkColor: '#3294F8',
+  backgroundInput: '#040F1A',
+  textInput: '#3A536B',
 } as const
