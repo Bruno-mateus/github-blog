@@ -99,6 +99,7 @@ export const CardRepo = styled.div`
   height: 16.25rem;
   width: 100%;
   border-radius: 10px;
+  color: ${({ theme }) => theme.textColor};
 
   header {
     display: flex;
