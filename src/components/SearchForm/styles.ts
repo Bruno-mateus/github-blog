@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SearchFormContainer = styled.section`
+export const SearchFormContainer = styled.form`
   width: 100%;
   display: grid;
   input {
@@ -10,6 +10,7 @@ export const SearchFormContainer = styled.section`
     color: ${({ theme }) => theme.textInput};
     border: none;
     padding: 1rem;
+    color: ${({ theme }) => theme.title};
   }
 `
 export const HeaderSearchForm = styled.header`
