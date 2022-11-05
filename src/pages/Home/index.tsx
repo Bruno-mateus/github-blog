@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useCallback, useContext, useEffect, useState } from 'react'
 import { api } from '../../lib/axios'
-import { format, formatDistance, subDays } from 'date-fns'
+import { format } from 'date-fns'
 import { Link } from 'react-router-dom'
 import { LinkSimple, GithubLogo, Users, Buildings } from 'phosphor-react'
 
@@ -21,7 +21,6 @@ import { SearchForm } from '../../components/SearchForm'
 import { PostsContext } from '../../contexts/PostContext'
 
 import { Spinner } from '../../components/Spinner'
-import ptBR from 'date-fns/esm/locale/pt-BR'
 
 export interface User {
   avatar_url: string
