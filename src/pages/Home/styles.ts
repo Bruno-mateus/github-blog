@@ -81,7 +81,7 @@ export const ProfileDetails = styled.div`
 export const HomeContent = styled.section`
   margin-top: 11.125rem;
   width: 100%;
-  display: grid;
+
   @media (max-width: 768px) {
     margin-top: 1rem;
   }
@@ -92,6 +92,10 @@ export const CardList = styled.section`
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-top: 2.56rem;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+  }
 `
 
 export const CardRepo = styled.div`
@@ -107,8 +111,9 @@ export const CardRepo = styled.div`
   header {
     display: flex;
     justify-content: space-between;
+
     span {
-      font-size: 0.87rem;
+      font-size: 0.68rem;
       white-space: nowrap;
     }
   }
@@ -118,5 +123,8 @@ export const CardRepo = styled.div`
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+  }
+  @media (max-width: 768px) {
+    padding: 0.8rem;
   }
 `

@@ -49,7 +49,6 @@ export const HeaderPostDetails = styled.header`
     color: ${({ theme }) => theme.linkColor};
   }
   @media (max-width: 768px) {
-    flex-direction: column;
     position: static;
 
     text-align: center;

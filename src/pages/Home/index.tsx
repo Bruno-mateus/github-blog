@@ -1,4 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useCallback, useContext, useEffect, useState } from 'react'
+import { api } from '../../lib/axios'
+import { format, formatDistance, subDays } from 'date-fns'
+import { Link } from 'react-router-dom'
+import { LinkSimple, GithubLogo, Users, Buildings } from 'phosphor-react'
+
 import {
   CardList,
   CardRepo,
@@ -10,14 +16,12 @@ import {
   ProfileDetails,
 } from './styles'
 
-import { LinkSimple, GithubLogo, Users, Buildings } from 'phosphor-react'
 import { SearchForm } from '../../components/SearchForm'
-import { useCallback, useContext, useEffect, useState } from 'react'
-import { api } from '../../lib/axios'
-import { Link } from 'react-router-dom'
+
 import { PostsContext } from '../../contexts/PostContext'
 
 import { Spinner } from '../../components/Spinner'
+import ptBR from 'date-fns/esm/locale/pt-BR'
 
 export interface User {
   avatar_url: string
@@ -96,7 +100,9 @@ export function Home() {
                   <CardRepo>
                     <header>
                       <h4>{post.title}</h4>
-                      <span>{post.created_at}</span>
+                      <span>
+                        {format(new Date(post.created_at), 'dd/MM/yyyy')}
+                      </span>
                     </header>
                     <p>{post.body}</p>
                   </CardRepo>
