@@ -23,11 +23,14 @@ import { format } from 'date-fns'
 
 export function Post() {
   const { id } = useParams()
-  const { posts, isLoading } = useContext(PostsContext)
+  const { posts, isLoading, getPosts } = useContext(PostsContext)
   const [post, setPost] = useState<IPost | undefined>()
 
   useEffect(() => {
+    getPosts()
     setPost(() => posts.find((post) => post.number === Number(id)))
+    console.log(posts)
+    console.log(post)
   }, [])
 
   if (post) {
