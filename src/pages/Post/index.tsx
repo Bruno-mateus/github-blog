@@ -19,6 +19,7 @@ import {
 import { IPost, PostsContext } from '../../contexts/PostContext'
 import ReactMarkdown from 'react-markdown'
 import { Spinner } from '../../components/Spinner'
+import { format } from 'date-fns'
 
 export function Post() {
   const { id } = useParams()
@@ -50,7 +51,7 @@ export function Post() {
             </span>
             <span>
               <Calendar />
-              {post.created_at}
+              {format(new Date(post.created_at), 'dd/MM/yyyy')}
             </span>
             <span>
               <Chat />
@@ -64,6 +65,6 @@ export function Post() {
       </PostMain>
     )
   } else {
-    return <h1>NOT FOUND POST</h1>
+    return <h1>Post not found</h1>
   }
 }

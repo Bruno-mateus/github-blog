@@ -9,6 +9,9 @@ export const PostMain = styled.main`
   position: relative;
   flex-direction: column;
   padding: 1rem;
+  a {
+    color: ${({ theme }) => theme.linkColor};
+  }
 `
 export const PostDetailsCard = styled.section`
   position: absolute;
